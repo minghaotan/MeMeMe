@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nickkuk/tauri-config-schema/main/v2/tauri.conf.json",
+  "productName": "MeMeMe",
+  "version": "0.1.0",
+  "identifier": "com.mememe.app",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:1420",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "MeMeMe",
+        "width": 420,
+        "height": 720,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' asset: https://asset.localcrypt; style-src 'self' 'unsafe-inline'"
+    }
+  },
+  "plugins": {
+    "sql": {
+      "preload": ["sqlite:mememe.db"]
+    }
+  }
+}

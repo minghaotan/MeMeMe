@@ -1,0 +1,20 @@
+{
+  "name": "mememe",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal privacy data service for home intranet",
+  "workspaces": [
+    "shared",
+    "server",
+    "app"
+  ],
+  "scripts": {
+    "dev:server": "npm -w server run dev",
+    "dev:app": "npm -w app run dev",
+    "dev:mac": "npm -w server run dev & npm -w app run tauri dev",
+    "build:server": "npm -w server run build",
+    "build:app": "npm -w app run build",
+    "lint": "npm -w server run lint & npm -w app run lint",
+    "typecheck": "tsc -b"
+  }
+}

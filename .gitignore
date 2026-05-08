@@ -1,0 +1,25 @@
+node_modules/
+dist/
+.env
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+.DS_Store
+
+# Tauri
+app/src-tauri/target/
+app/src-tauri/gen/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build artifacts
+server/uploads/
+server/backups/
+
+# OS
+Thumbs.db
